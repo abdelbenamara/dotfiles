@@ -2,8 +2,8 @@
 
 ## Setup
 
-```console
-$ make
 ```
-
-NB : This will create symlinks from this repository to the home directory
+git clone https://github.com/abdelbenamara/dotfiles.git ~/.dotfiles
+make -C ~/.dotfiles
+source .bash_profile
+```
