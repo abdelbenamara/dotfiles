@@ -13,6 +13,8 @@ FILES += .vimrc
 
 FILES += .gitconfig
 
+RM := rm -f
+
 ${NAME}:
 	for file in ${FILES}; do \
 		ln -sf $(shell pwd)/$$file $(HOME)/$$file; \
@@ -20,4 +22,11 @@ ${NAME}:
 
 all: ${NAME}
 
-.PHONY: all
+clean:
+	for file in ${FILES}; do \
+		$(RM) $(HOME)/$$file; \
+	done;
+
+re: clean all
+
+.PHONY: re clean all
