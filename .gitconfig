@@ -3,8 +3,8 @@
 	b = branch -avv
 	r = reset HEAD~
 	s = status -s
-	a = "!f() { git add $1; git commit -m \"Added $(basename $1 | sed 's/\\(\\.\\?[^.]*\\)\\.\\?.*$/\\1/')\"; }; f"
-	u = "!f() { git add $1; git commit -m \"Updated $(basename $1 | sed 's/\\(\\.\\?[^.]*\\)\\.\\?.*$/\\1/')\"; }; f"
+	a = "!f() { git add $1; git commit -m \"Added $(basename $1 | sed -E 's/(\\.?[^.]*)\\.?.*$/\\1/')\"; }; f"
+	u = "!f() { git add $1; git commit -m \"Updated $(basename $1 | sed -E 's/(\\.?[^.]*)\\.?.*$/\\1/')\"; }; f"
 
 [core]
 	editor = vim
