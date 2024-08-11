@@ -1,5 +1,5 @@
 [alias]
-	f = fetch -ap
+	f = fetch --all -ap
 	b = branch -avv
 	r = reset HEAD~
 	s = status -s
