@@ -1,16 +1,14 @@
 SHELL := bash
 
-NAME = dotfiles
+NAME := dotfiles
 
+FILES := .hushlogin
 FILES += .aliases
 FILES += .exports
 FILES += .path
-
 FILES += .bashrc
 FILES += .bash_profile
-
 FILES += .vimrc
-
 FILES += .gitconfig
 
 RM := rm -f
