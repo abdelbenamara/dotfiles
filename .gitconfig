@@ -1,8 +1,12 @@
 [alias]
-	f = fetch --all -ap
+	a = add
 	b = branch -avv
+	c = checkout
+	d = branch -d
+	f = fetch --all -ap
+	m = commit -m
 	r = reset HEAD~
-	s = status -s
+	s = !git f && echo '-------' && git b && echo '-------' && git status -s
 
 [core]
 	editor = vim
